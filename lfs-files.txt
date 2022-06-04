@@ -1,0 +1,4 @@
+ffb36d24d6 * docs/9711213.pdf
+1d4c4d6f75 * fonts/Joan-Regular.ttf
+464c8db979 * fonts/OFL.txt
+4d2d4c95ea * img/small.jpg
