@@ -1,0 +1,13 @@
+validate:
+  stage: test
+  script:
+    - grep -i '^*\.jpg' .gitattributes    # Track *.jpg
+    - grep -i '^*\.png' .gitattributes    # Track *.png
+    - grep -i '^*\.pdf' .gitattributes    # Track *.pdf
+    - grep -i '^fonts/**' .gitattributes  # Track fonts/**
+    - grep -i '^img/a-modest-proposal.jpg' lfs-files.txt
+    - grep -i '^img/pdf-reference.pdf' lfs-files.txt
+    - grep -i '^fonts/static/OpenSans' lfs-files.txt
+    - git lfs ls-files --name-only | grep '^img/a-modest-proposal.jpg'
+    - git lfs ls-files --name-only | grep '^img/pdf-reference.pdf'
+    - git lfs ls-files --name-only | grep '^fonts/static/OpenSans'
